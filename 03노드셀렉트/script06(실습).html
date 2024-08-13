@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" value="0" readonly class="total">
+    <button class="plus">증가</button>
+    <button class="minus">감소</button>
+
+    <script>
+        var total = document.querySelector(".total");
+        var plus = document.querySelector(".plus")
+        var minus = document.querySelector(".minus")
+
+        plus.addEventListener('click', function() {
+            total.value ++;
+        });
+
+        minus.addEventListener('click', function() {
+            if(total.value == 0) {
+                alert("0보다 작을수 없습니다.")
+                return;
+            } else {
+                total.value --;
+            }
+        });
+            </script>
+</body>
+
+</html>

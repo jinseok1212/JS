@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {border-spacing: 0; border-collapse: collapse;}
+        thead th, td {
+            border: 1px solid black;
+        }
+    </style>
+    
+</head>
+<body>
+	<button type="button" id="addLists">5개추가하기</button>
+    <button type="button" id="addList">1개추가하기</button>
+    
+    <table>
+        <thead>
+			<tr>
+				<th>교시</th>
+				<th>훈련과목</th>
+				<th>담당자</th>
+				<th>훈련내용</th>
+			</tr>
+        </thead>
+        <tbody class="todoList">
+            <tr>
+                <td><input type="text" size="3"></td>
+                <td><input type="text"></td>
+                <td><input type="text" size="5"></td>
+                <td><input type="text"></td>
+            </tr>
+        </tbody>
+        
+    </table>
+    <script>
+        var add1 = document.querySelector("#addlist");
+        var add5 = document.querySelector("#addlists");
+        var list = document.querySelector(".todoList");
+        add1.onclick
+        add1.onclick = function() {
+            createTag();
+        }
+        add5.onclick = function() {
+            for(var i = 0; i < 4; i++) {
+                createTag();
+            }
+        }
+        function createTag() {
+            var tr = document.createElement(tr)
+            var str = "";
+            str += '<td><input type="text" size="3"></td>'
+            str += '<td><input type="text" ></td>'
+            str += '<td><input type="text" size="5"></td>'
+            str += '<td><input type="text" ></td>'
+            tr.innerHTML = str;
+            list.appendChild(tr);
+
+        }
+            
+        
+
+    </script>
+</body>
+</html>
